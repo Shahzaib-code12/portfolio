@@ -156,7 +156,7 @@ function App(){
     h("section",{id:"contact"},h(Reveal,null,h("h2",null,"Let’s work together"),
       h("p",{className:"mut"},"Open to new opportunities. Feel free to reach out."),
       h("div",{className:"ct"},h("a",{className:"btn p",href:"mailto:"+EMAIL},"Email me"),h("a",{className:"btn",href:LINKEDIN,target:"_blank",rel:"noopener"},"LinkedIn"),h("a",{className:"btn",href:"tel:"+PHONE.replace(/-/g,"")},PHONE)))),
-    h("footer",null,"© "+new Date().getFullYear()+" "+NAME+" · Built with React"));
+    h("footer",null,"© "+new Date().getFullYear()+" "+NAME+" "));
 }
 ReactDOM.createRoot(document.getElementById("root")).render(h(App));
 </script>
