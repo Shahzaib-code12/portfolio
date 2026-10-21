@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shahzaib — .NET Developer</title>
+<style>
+:root{--bg:#f6f7fb;--fg:#12142a;--mut:#5b6088;--card:#fff;--acc:#6d4aff;--acc2:#0ea5c6;--bd:#e1e4f2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0b0d17;--fg:#e8eaf6;--mut:#9aa0c3;--card:#141830;--acc:#8b6cff;--acc2:#22d3ee;--bd:#262b4d}}
+:root[data-theme="dark"]{--bg:#0b0d17;--fg:#e8eaf6;--mut:#9aa0c3;--card:#141830;--acc:#8b6cff;--acc2:#22d3ee;--bd:#262b4d}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:calc(12px + env(safe-area-inset-top,0px)) 5vw 12px;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+nav b{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav div{display:flex;gap:16px;font-size:.88rem}
+nav a{color:var(--mut);text-decoration:none;transition:color .2s}nav a:hover{color:var(--acc)}
+section{max-width:1000px;margin:0 auto;padding:80px 5vw 30px}
+.hero{min-height:100vh;display:flex;align-items:center;gap:40px;flex-wrap:wrap-reverse;justify-content:center;position:relative}
+.hero>.tx{flex:1 1 340px}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.33;z-index:-1;animation:float 9s ease-in-out infinite}
+.b1{width:320px;height:320px;background:var(--acc);top:10%;right:-60px}
+.b2{width:260px;height:260px;background:var(--acc2);bottom:8%;left:-60px;animation-delay:-4s}
+@keyframes float{50%{transform:translate(-30px,40px) scale(1.15)}}
+.hi{color:var(--acc);font-weight:600;letter-spacing:.05em;animation:up .8s both}
+h1{font-size:clamp(2.4rem,8vw,4.4rem);line-height:1.1;margin:.2em 0;animation:up .8s .15s both}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:clamp(1.05rem,3.4vw,1.5rem);color:var(--mut);min-height:2em;animation:up .8s .3s both}
+.typ::after{content:"|";margin-left:2px;color:var(--acc);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@keyframes up{from{opacity:0;transform:translateY(24px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap;animation:up .8s .45s both}
+.btn{padding:12px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid var(--acc);color:var(--fg);transition:transform .2s,box-shadow .2s;display:inline-block}
+.btn.p{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#fff;border-color:transparent}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px color-mix(in srgb,var(--acc) 35%,transparent)}
+.dp{position:relative;width:min(280px,70vw);aspect-ratio:1;animation:up .9s .2s both;cursor:pointer}
+.dp::before{content:"";position:absolute;inset:-8px;border-radius:50%;background:conic-gradient(var(--acc),var(--acc2),var(--acc));animation:spin 6s linear infinite}
+.dp .in{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:var(--card);display:flex;align-items:center;justify-content:center;flex-direction:column;border:6px solid var(--bg)}
+.dp img{width:100%;height:100%;object-fit:cover}
+.dp .ini{font-size:4rem;font-weight:800;background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.dp small{color:var(--mut);font-size:.75rem}
+h2{font-size:1.9rem;margin:0 0 24px}h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;margin-top:8px;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+.mut{color:var(--mut)}
+.stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:18px}.stats b{display:block;font-size:2rem;color:var(--acc)}.stats small{color:var(--mut)}
+.sk{margin-bottom:14px}.sk span{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:6px}
+.bar{height:8px;border-radius:8px;background:var(--bd);overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--acc),var(--acc2));transition:width 1.3s cubic-bezier(.2,.8,.2,1) .2s}
+.in .bar i{width:var(--w)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 18px}.chips span{font-size:.8rem;padding:5px 12px;border-radius:99px;border:1px solid var(--bd);background:var(--card);transition:transform .2s,border-color .2s}.chips span:hover{transform:translateY(-3px);border-color:var(--acc)}
+.tl{border-left:2px solid var(--bd);padding-left:24px;margin-left:6px}
+.job{position:relative;margin-bottom:34px}.job::before{content:"";position:absolute;left:-32px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 5px color-mix(in srgb,var(--acc) 22%,transparent)}
+.job h3{margin:0}.job .d{color:var(--acc);font-size:.85rem;font-weight:600}
+.pj{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 18px;margin-top:14px}
+.pj h4{margin:0 0 4px}.pj ul{margin:8px 0 0;padding-left:18px;color:var(--mut);font-size:.9rem}.pj li{margin-bottom:4px}
+.tech{font-size:.78rem;color:var(--acc2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:24px;height:100%;transition:transform .15s,box-shadow .3s}
+.card:hover{box-shadow:0 18px 40px color-mix(in srgb,var(--acc) 22%,transparent)}
+.ico{font-size:2rem}.card h3{margin:.4em 0 .2em}.card p{color:var(--mut);margin:0 0 12px;font-size:.93rem}
+.tags{display:flex;gap:6px;flex-wrap:wrap}.tags span{font-size:.74rem;padding:3px 10px;border-radius:99px;background:color-mix(in srgb,var(--acc) 14%,transparent);color:var(--acc)}
+.ct{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+footer{text-align:center;color:var(--mut);padding:40px 5vw;font-size:.85rem}
+@media (max-width:620px){nav div{gap:9px;font-size:.74rem}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script>
+const {useState,useEffect,useRef}=React,h=React.createElement;
+/* ====== EDIT YOUR DETAILS HERE ====== */
+const PHOTO="profile.jpg";                       // e.g. "profile.jpg" (put the image next to index.html)
+const NAME="Shahzaib",EMAIL="hshahzaib676@gmail.com",PHONE="0336-8371851";
+const LINKEDIN="https://linkedin.com/in/hafiz-shahzaib-6635672bb";
+const STATS=[["1.5+","Years experience"],["5+","Production apps"],["140+","Tasks delivered"],["12","EPM modules"]];
+const SKILLS=[["ASP.NET Core MVC / C#",92],["SQL Server & Stored Procedures",90],["ADO.NET / Entity Framework Core",88],["JavaScript / jQuery / AJAX",85],["React.js & Node.js",70]];
+const STACK=[
+["Backend",["C#","ASP.NET Core MVC",".NET 6","Entity Framework Core","LINQ","ADO.NET","Node.js","Express.js"]],
+["Database",["SQL Server","T-SQL","Stored Procedures","SQL Transactions","MongoDB"]],
+["Frontend",["HTML5","CSS3","Bootstrap 5","Tailwind CSS","jQuery","AJAX","Razor Views","React.js","TypeScript","Angular"]],
+["Architecture & Security",["N-Tier","Repository Pattern","Unit of Work","REST APIs","ASP.NET Core Identity","JWT","bcrypt","RBAC"]],
+["Tools",["Visual Studio 2022","VS Code","SSMS","Postman","Git & GitHub","CI/CD"]]];
+const JOBS=[
+{r:".NET Developer",c:"Daewoo Pakistan",d:"July 2026 – Present",p:[
+{t:"Smart Transition",s:"ASP.NET Core MVC · ADO.NET · SQL Server · Chart.js",b:["Built and maintain 7 end-to-end modules: Policy, Vendor, Owner, Insurer, Vehicle Type, Bus and Fixed Asset management.","Delivered the full Fixed Asset lifecycle with role-based access and a 3-chart analytics dashboard.","Engineered the ANF Uniform Request workflow: master-detail transactions with rollback, approval routing and HTML email alerts.","Resolved production incidents (SQL errors, HTTP 500, NullReference, session mismatches)."]},
+{t:"Enterprise Performance Management (EPM)",s:"ASP.NET Core MVC · ADO.NET · SQL Server · jQuery",b:["Built Daily Feed reporting for 5 business units: Finance, Urban, Fastex, Fueling and EBS.","Prevented duplicate submissions with SQL transactions across multiple tables.","Created History views for 12 modules, with role-based UI visibility and HTML-to-PDF export.","Implemented session timeout handling and secure Change Password flow."]},
+{t:"Daewoo Express Corporate Website",s:"ASP.NET Core MVC · SQL Server · jQuery",b:["Rebuilt 58 terminal locations using JSON-driven loading with in-memory caching.","Wrote FAQ content for 10+ topics and led a UAT review documenting 14+ defects before go-live."]},
+{t:"Smart Transit Management System",s:"ASP.NET Core · ADO.NET · SQL Server",b:["Developed 4 modules: Insurance, Outsourced Bus, Surveys, and Complaints & Feedback, plus management dashboards."]}]},
+{r:"Developer",c:"Nova Soft Tech",d:"Jan 2025 – June 2026",p:[
+{t:"5+ production apps on .NET and MERN",s:"ASP.NET Core · EF Core · Node · React · Angular",b:["ASP.NET Core MVC with N-Tier, Repository and Unit of Work patterns, plus Identity-based RBAC.","E-commerce platform with product approval workflow, AJAX search and admin dashboard.","Banking and payroll system with secure transactions and financial reporting.","REST APIs with Node, Express, MongoDB and JWT; React components using Hooks and Context API.","Complete front-end of a VPN application in Angular and TypeScript."]}]}];
+const PROJECTS=[
+{i:"🏗️",t:"Fixed Asset Management & Analytics",d:"Asset lifecycle, cascading dropdowns, dynamic reports and a Chart.js dashboard.",g:["ASP.NET Core","SQL Server","Chart.js"]},
+{i:"✅",t:"ANF Uniform Request Workflow",d:"Multi-item approval workflow with rollback safety and email notifications.",g:["SMTP","SQL Transaction"]},
+{i:"📈",t:"Multi-Business Daily Feed Platform",d:"Daily reporting for 5 business units with validations and history views.",g:["jQuery","AJAX","SQL Server"]},
+{i:"🛒",t:"E-Commerce Platform",d:"Product approval, real-time search, cart and admin dashboard.",g:["EF Core","Identity","Bootstrap"]},
+{i:"🏦",t:"Banking & Payroll System",d:"Secure transactions, role-based authorization and financial reports.",g:["ASP.NET Core MVC","JWT","SQL Server"]},
+{i:"🍔",t:"Food Ordering REST API",d:"Orders, menu management and complete authentication flow.",g:["Node.js","Express","MongoDB"]}];
+/* ==================================== */
+function Reveal({children,delay=0}){
+  const r=useRef(),[v,setV]=useState(false);
+  useEffect(()=>{const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setV(true);o.disconnect()}},{threshold:.12});o.observe(r.current);return()=>o.disconnect()},[]);
+  return h("div",{ref:r,className:"rv"+(v?" in":""),style:{transitionDelay:delay+"ms"}},children);
+}
+function Typer({words}){
+  const [i,setI]=useState(0),[t,setT]=useState(""),[d,setD]=useState(false);
+  useEffect(()=>{
+    const w=words[i];
+    const id=setTimeout(()=>{
+      if(!d){setT(w.slice(0,t.length+1));if(t.length+1===w.length)setD(true)}
+      else{setT(w.slice(0,t.length-1));if(t.length-1===0){setD(false);setI((i+1)%words.length)}}
+    },d&&t===w?1300:d?35:80);
+    return()=>clearTimeout(id);
+  },[t,d,i]);   
+  return h("span",{className:"typ"},t);
+}
+function Avatar(){
+  const [src,setSrc]=useState(PHOTO),f=useRef();
+  const pick=e=>{const file=e.target.files[0];if(!file)return;const r=new FileReader();r.onload=()=>setSrc(r.result);r.readAsDataURL(file)};
+  return h("div",{className:"dp",onClick:()=>f.current.click(),title:"Click to preview your photo"},
+    h("div",{className:"in"},src?h("img",{src,alt:NAME}):h(React.Fragment,null,h("div",{className:"ini"},"SH"),h("small",null,"Click to add photo"))),
+    h("input",{ref:f,type:"file",accept:"image/*",onChange:pick,style:{display:"none"}}));
+}
+function Card({p}){
+  const mv=e=>{const b=e.currentTarget.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;e.currentTarget.style.transform="perspective(700px) rotateY("+x*10+"deg) rotateX("+(-y*10)+"deg) translateY(-4px)"};
+  return h("article",{className:"card",onMouseMove:mv,onMouseLeave:e=>{e.currentTarget.style.transform=""}},
+    h("div",{className:"ico"},p.i),h("h3",null,p.t),h("p",null,p.d),h("div",{className:"tags"},p.g.map(g=>h("span",{key:g},g))));
+}
+function App(){
+  return h(React.Fragment,null,
+    h("nav",null,h("b",null," "+NAME+" "),h("div",null,["about","skills","experience","projects","contact"].map(s=>h("a",{key:s,href:"#"+s},s[0].toUpperCase()+s.slice(1))))),
+    h("section",{className:"hero"},h("div",{className:"blob b1"}),h("div",{className:"blob b2"}),
+      h("div",{className:"tx"},
+        h("div",{className:"hi"},"HELLO, I’M"),h("h1",null,h("em",null,NAME)),
+        h("div",{className:"role"},".NET Developer building ",h(Typer,{words:["enterprise web apps","ASP.NET Core MVC systems","SQL Server solutions","clean React interfaces"]})),
+        h("div",{className:"cta"},h("a",{className:"btn p",href:"#projects"},"View my work"),h("a",{className:"btn",href:"#contact"},"Contact me"))),
+      h(Avatar)),
+    h("section",{id:"about"},h(Reveal,null,h("h2",null,"About me"),
+      h("p",{className:"mut",style:{maxWidth:720}},"I’m a .NET Developer with 1.5+ years of hands-on experience building production-grade enterprise web applications with ASP.NET Core MVC, C#, ADO.NET, Entity Framework Core and SQL Server. At Daewoo Pakistan I build and support business-critical platforms covering fleet and insurance management, financial reporting, role-based access control and transactional data integrity."),
+      h("div",{className:"stats"},STATS.map(s=>h("div",{key:s[1]},h("b",null,s[0]),h("small",null,s[1])))))),
+    h("section",{id:"skills"},h("h2",null,"Skills"),
+      STACK.map((g,i)=>h(Reveal,{key:g[0],delay:i*60},h("b",null,g[0]),h("div",{className:"chips"},g[1].map(c=>h("span",{key:c},c))))),
+      h("div",{style:{marginTop:20}},SKILLS.map((s,i)=>h(Reveal,{key:s[0],delay:i*90},h("div",{className:"sk"},h("span",null,h("b",null,s[0]),h("span",{className:"mut"},s[1]+"%")),h("div",{className:"bar"},h("i",{style:{"--w":s[1]+"%"}}))))))),
+    h("section",{id:"experience"},h("h2",null,"Experience"),
+      h("div",{className:"tl"},JOBS.map(j=>h(Reveal,{key:j.c},h("div",{className:"job"},
+        h("h3",null,j.r+" · "+j.c),h("div",{className:"d"},j.d),
+        j.p.map(p=>h("div",{className:"pj",key:p.t},h("h4",null,p.t),h("div",{className:"tech"},p.s),h("ul",null,p.b.map(b=>h("li",{key:b},b)))))))))),
+    h("section",{id:"projects"},h("h2",null,"Key projects"),
+      h("div",{className:"grid"},PROJECTS.map((p,i)=>h(Reveal,{key:p.t,delay:i*100},h(Card,{p}))))),
+    h("section",{id:"education"},h(Reveal,null,h("h2",null,"Education"),
+      h("b",null,"BS Software Engineering"),h("div",{className:"mut"},"COMSATS University Islamabad, Abbottabad Campus · 2021 – 2025"),
+      h("p",{className:"mut"},"Languages: English (Fluent), Urdu (Fluent)"))),
+    h("section",{id:"contact"},h(Reveal,null,h("h2",null,"Let’s work together"),
+      h("p",{className:"mut"},"Open to new opportunities. Feel free to reach out."),
+      h("div",{className:"ct"},h("a",{className:"btn p",href:"mailto:"+EMAIL},"Email me"),h("a",{className:"btn",href:LINKEDIN,target:"_blank",rel:"noopener"},"LinkedIn"),h("a",{className:"btn",href:"tel:"+PHONE.replace(/-/g,"")},PHONE)))),
+    h("footer",null,"© "+new Date().getFullYear()+" "+NAME+" · Built with React"));
+}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>
+</body>
+</html>
